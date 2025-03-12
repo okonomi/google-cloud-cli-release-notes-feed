@@ -5,6 +5,13 @@
   "feed_url": "https://okonomi.github.io/google-cloud-cli-release-notes-feed/feed.json",
   "items": [
     {
+      "id": "9800_2016-2-24",
+      "url": "https://cloud.google.com/sdk/docs/release-notes#9800_2016-2-24",
+      "title": "98.0.0 (2016-2-24)",
+      "content_html": "<ul>\n<li>\n<p>Release 95.0.0 introduced a bug that generated corrupt keys for Windows gcloud\ncompute ssh|copy-files. Any keys generated on Windows between 95.0.0 and\n97.0.0 inclusive are rejected by ssh servers. <code translate=\"no\" dir=\"ltr\">gcloud compute</code> has been\nchanged to:</p>\n\n<ul>\n<li>Fix the winkeygen Windows key generator.</li>\n<li>Recognize corrupt Windows keys and automatically regenerate them.</li>\n</ul>\n</li>\n<li><p>Fixed <a href=\"https://issuetracker.google.com/issues/35906617\">#538</a>.\nUsers should no longer get \"gsutil ImportError: No module named google\"\nerrors.</p></li>\n</ul><h3 id=\"google_app_engine_64\" data-text=\"Google App Engine\" tabindex=\"-1\">Google App Engine</h3><ul>\n<li>MySqldb \"latest\" version changed from 1.24b4 to 1.2.5.</li>\n</ul><h3 id=\"emulators_13\" data-text=\"Emulators\" tabindex=\"-1\">Emulators</h3><ul>\n<li>Improves Pub/Sub emulator's ability to handle requests concurrent with HTTP\npull requests.</li>\n<li>The Pub/Sub emulator attempts to detect and inform users when an unsupported\nAPI version is used.</li>\n<li>The Pub/Sub emulator now correctly handles absolute URIs in HTTP/Json\nrequests.</li>\n</ul><h3 id=\"windows_support\" data-text=\"Windows support\" tabindex=\"-1\">Windows support</h3><ul>\n<li>Google Cloud SDK no longer needs Python installed when using the Windows\nInstaller. The SDK for Windows comes with Python bundled.</li>\n</ul>",
+      "date_published": "2016-02-24T00:00:00+00:00"
+    },
+    {
       "id": "9700_2016-2-17",
       "url": "https://cloud.google.com/sdk/docs/release-notes#9700_2016-2-17",
       "title": "97.0.0 (2016-2-17)",
@@ -206,13 +213,6 @@
       "title": "0.9.70 (2015-07-22)",
       "content_html": "<ul>\n<li>Add <code translate=\"no\" dir=\"ltr\">gcloud compute instance-groups</code> commands.</li>\n<li>Move <code translate=\"no\" dir=\"ltr\">gcloud beta deployment-manager</code> commands to general availability as\n<code translate=\"no\" dir=\"ltr\">gcloud deployment-manager</code> and update to use the v2beta3 API. This change\ndoes not alter the gcloud surface for users of the deployment-manager\ncomponent.</li>\n<li>Update kubectl to 1.0.0.</li>\n<li>\n<code translate=\"no\" dir=\"ltr\">gcloud alpha genomics</code> commands now use the genomics V1 API. The\n--project-number flag for <code translate=\"no\" dir=\"ltr\">dataset create</code> and <code translate=\"no\" dir=\"ltr\">dataset list</code> is now\nobsolete. The configured --project-id is used instead and can be overridden\nwith the --project-id flag.</li>\n<li>Fix hang on errors in <code translate=\"no\" dir=\"ltr\">gcloud preview app deploy</code>.</li>\n</ul>",
       "date_published": "2015-07-22T00:00:00+00:00"
-    },
-    {
-      "id": "0969_2015-07-15",
-      "url": "https://cloud.google.com/sdk/docs/release-notes#0969_2015-07-15",
-      "title": "0.9.69 (2015-07-15)",
-      "content_html": "<ul>\n<li>Update kubectl to 0.20.2.</li>\n<li>Fix an authentication issue with 'gcloud docker' affecting docker version\n1.7.0 and later.</li>\n<li>Remove <code translate=\"no\" dir=\"ltr\">gcloud preview dm-v2</code> command group.</li>\n<li>Remove <code translate=\"no\" dir=\"ltr\">gcloud preview deployment-manager</code> command group\n(<code translate=\"no\" dir=\"ltr\">gcloud beta deployment-manager</code> still exists; see\n<a href=\"https://cloud.google.com/sdk/#install-version\">https://cloud.google.com/sdk/#install-version</a> if you want to pin your\ninstallation to an old version).</li>\n<li>Bug fixes.</li>\n</ul>",
-      "date_published": "2015-07-15T00:00:00+00:00"
     }
   ],
   "next_url": "https://okonomi.github.io/google-cloud-cli-release-notes-feed/feeds/16.json"
