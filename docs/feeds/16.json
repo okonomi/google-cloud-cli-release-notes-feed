@@ -5,6 +5,13 @@
   "feed_url": "https://okonomi.github.io/google-cloud-cli-release-notes-feed/feed.json",
   "items": [
     {
+      "id": "9400_2016-1-27",
+      "url": "https://cloud.google.com/sdk/docs/release-notes#9400_2016-1-27",
+      "title": "94.0.0 (2016-1-27)",
+      "content_html": "<h3 id=\"google_compute_engine_70\" data-text=\"Google Compute Engine\" tabindex=\"-1\">Google Compute Engine</h3><ul>\n<li>Added <code translate=\"no\" dir=\"ltr\">gcloud alpha compute url-maps list-cache-invalidations</code> command.</li>\n</ul><h3 id=\"google_app_engine_68\" data-text=\"Google App Engine\" tabindex=\"-1\">Google App Engine</h3><ul>\n<li><p>Google App Engine components updated to 1.9.31. Please visit the following\nrelease notes for details:\nPython - https://cloud.google.com/appengine/docs/standard/python/release-notes\nJava - https://cloud.google.com/appengine/docs/standard/java/release-notes</p></li>\n<li><p>Added <code translate=\"no\" dir=\"ltr\">--runtime</code> flag to <code translate=\"no\" dir=\"ltr\">gcloud preview app gen-config</code> to specify a runtime\nwhen a directory identifies as multiple runtimes. This flag can be used in\nconjunction with <code translate=\"no\" dir=\"ltr\">--custom</code>.</p></li>\n</ul><h3 id=\"google_container_engine_58\" data-text=\"Google Container Engine\" tabindex=\"-1\">Google Container Engine</h3><ul>\n<li>\n<code translate=\"no\" dir=\"ltr\">gcloud container cluster describe</code> and <code translate=\"no\" dir=\"ltr\">list</code> commands now notify the user\nwhen their cluster versions are about to go out of support or are unsupported.</li>\n</ul><h3 id=\"google_cloud_logging_12\" data-text=\"Google Cloud Logging\" tabindex=\"-1\">Google Cloud Logging</h3><ul>\n<li>\n<code translate=\"no\" dir=\"ltr\">gcloud beta logging write</code> and <code translate=\"no\" dir=\"ltr\">gcloud beta logging logs delete</code> commands now\nuse the V2beta1 API. The <code translate=\"no\" dir=\"ltr\">gcloud beta logging write</code> command now uses the\nglobal resource descriptor (which translates to \"custom.googleapis.com\"\nservice in V1).</li>\n</ul><h3 id=\"cloud_dataproc_88\" data-text=\"Cloud Dataproc\" tabindex=\"-1\">Cloud Dataproc</h3><ul>\n<li>\n<code translate=\"no\" dir=\"ltr\">gcloud beta dataproc clusters create</code> now supports <code translate=\"no\" dir=\"ltr\">--tags</code> and <code translate=\"no\" dir=\"ltr\">--metadata</code>\nflags to set instance tags and metadata on all instances in the Dataproc\ncluster.</li>\n</ul><h3 id=\"pubsub_emulator_17\" data-text=\"Pub/Sub Emulator\" tabindex=\"-1\">Pub/Sub Emulator</h3><ul>\n<li>A new --host flag can be used to specify the address the emulator should bind\nas. The flag can be left unspecified, set to \"localhost\", a hostname, or an\nexplicit IP address.</li>\n</ul><h3 id=\"projects_2\" data-text=\"Projects\" tabindex=\"-1\">Projects</h3><ul>\n<li><p>Added commands <code translate=\"no\" dir=\"ltr\">get-iam-policy</code>, <code translate=\"no\" dir=\"ltr\">set-iam-policy</code>, <code translate=\"no\" dir=\"ltr\">add-iam-policy-binding</code>,\nand <code translate=\"no\" dir=\"ltr\">remove-iam-policy-binding</code> for the <code translate=\"no\" dir=\"ltr\">gcloud beta projects</code> surface.</p></li>\n<li><p>Added the <code translate=\"no\" dir=\"ltr\">gcloud projects list</code> command that can be used to list projects.</p></li>\n</ul>",
+      "date_published": "2016-01-27T00:00:00+00:00"
+    },
+    {
       "id": "9300_2016-1-20",
       "url": "https://cloud.google.com/sdk/docs/release-notes#9300_2016-1-20",
       "title": "93.0.0 (2016-1-20)",
@@ -206,13 +213,6 @@
       "title": "0.9.66 (2015-06-24)",
       "content_html": "<ul>\n<li>New commands\n<ul>\n<li>\n<code translate=\"no\" dir=\"ltr\">gcloud alpha compute instances set-machine-type</code> for managing types</li>\n<li>\n<code translate=\"no\" dir=\"ltr\">gcloud topic</code> for supplementary help topics.</li>\n</ul>\n</li>\n<li>\n<code translate=\"no\" dir=\"ltr\">gcloud deployment-manager deployments delete</code> prompt defaults to false.</li>\n</ul>",
       "date_published": "2015-06-24T00:00:00+00:00"
-    },
-    {
-      "id": "0965_2015-06-17",
-      "url": "https://cloud.google.com/sdk/docs/release-notes#0965_2015-06-17",
-      "title": "0.9.65 (2015-06-17)",
-      "content_html": "<ul>\n<li>Fixes <code translate=\"no\" dir=\"ltr\">reset-windows-password</code> on Windows if <code translate=\"no\" dir=\"ltr\">openssl</code> is present on the\npath.</li>\n<li>\n<code translate=\"no\" dir=\"ltr\">gcloud compute reset-windows-password</code> is now available as a GA command.</li>\n<li>Prevent creation of a user that matches the machine name on Windows.</li>\n<li>gsutil now runs properly from not-default drive letters on Windows.</li>\n<li>kubectl updated to 0.18.1.</li>\n<li>\n<code translate=\"no\" dir=\"ltr\">gcloud preview docker</code> moved to <code translate=\"no\" dir=\"ltr\">gcloud docker</code>.</li>\n</ul>",
-      "date_published": "2015-06-17T00:00:00+00:00"
     }
   ],
   "next_url": "https://okonomi.github.io/google-cloud-cli-release-notes-feed/feeds/17.json"
