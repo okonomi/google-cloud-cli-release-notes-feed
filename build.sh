@@ -1,9 +1,13 @@
 #/usr/bin/env bash
 set -euxo pipefail
 
-curl https://cloud.google.com/sdk/docs/release-notes | ruby release_notes_to_feed.rb | jq > docs/feed.json
+curl -fsSL https://docs.cloud.google.com/sdk/docs/release-notes | ruby release_notes_to_feed.rb | jq > docs/feed.json
 
 FEED_ITEM_COUNT=$(cat docs/feed.json | jq ".items | length")
+if [ "$FEED_ITEM_COUNT" -eq 0 ]; then
+  echo "No release notes found; refusing to publish an empty feed" >&2
+  exit 1
+fi
 PAGE_COUNT=$((($FEED_ITEM_COUNT + 30 - 1) / 30))
 
 mkdir -p docs/feeds
