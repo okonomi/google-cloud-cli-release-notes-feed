@@ -39,9 +39,11 @@ class SdkRelease
   private
 
   def self.parseTitle(title)
-    # ex.) 160.0.0 (2017-06-21)
-    m = /(\d+\.\d+\.\d+) \((\d{4}-\d{1,2}-\d{1,2})/.match(title)
-    m[2]
+    # ex.) "160.0.0 (2017-06-21)", or a date-only title such as "2026-08-20"
+    m = /\d{4}-\d{1,2}-\d{1,2}/.match(title)
+    raise ArgumentError, "No date found in release title: #{title.inspect}" if m.nil?
+
+    m[0]
   end
 end
 
